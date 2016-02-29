@@ -4,10 +4,10 @@
     <title>Le site des tuteurs</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>arcanexil.github.io/SDT//</link>
-    <atom:link href="arcanexil.github.io/SDT//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 29 Feb 2016 19:04:15 +0100</pubDate>
-    <lastBuildDate>Mon, 29 Feb 2016 19:04:15 +0100</lastBuildDate>
+    <link>arcanexil.github.io//sdt/</link>
+    <atom:link href="arcanexil.github.io//sdt/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 29 Feb 2016 19:39:50 +0100</pubDate>
+    <lastBuildDate>Mon, 29 Feb 2016 19:39:50 +0100</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -153,8 +153,8 @@ corvette ~/geo $ pwd
 &lt;p&gt;Comme vous le constatez, c’est l’adresse absolue du répertoire qui est indiquée : pwd indique tous les noms de répertoires traversés depuis la racine (/users) pour l’atteindre. L’adresse relative d’un fichier ou d’un répertoire est donnée par rapport au répertoire personnel de l’utilisateur : « ~ » signifie en fait /users/98/litt/toto (dans le cas de Toto).&lt;/p&gt;
 </description>
         <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
-        <link>arcanexil.github.io/SDT//2015/12/05/repertoires.html</link>
-        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/repertoires.html</guid>
+        <link>arcanexil.github.io//sdt/2015/12/05/repertoires.html</link>
+        <guid isPermaLink="true">arcanexil.github.io//sdt/2015/12/05/repertoires.html</guid>
         
         
       </item>
@@ -234,8 +234,8 @@ Qu’est-ce que root ?&lt;/p&gt;
 &lt;p&gt;« Devenir root » est un fantasme courant d’une certaine frange de la population de la salle S, parce que c’est interdit et théoriquement impossible (donc tentant) et que les informaticiens se divisent en deux sous-castes : ceux qui savent passer root sans y être autorisés et les autres… C’est la raison d’être de la banderole en salle S. N’oubliez jamais que Jacques Beigbeder n’est pas un imbécile, et que si vous vous faites prendre la sanction sera très lourde…&lt;/p&gt;
 </description>
         <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
-        <link>arcanexil.github.io/SDT//2015/12/05/machine.html</link>
-        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/machine.html</guid>
+        <link>arcanexil.github.io//sdt/2015/12/05/machine.html</link>
+        <guid isPermaLink="true">arcanexil.github.io//sdt/2015/12/05/machine.html</guid>
         
         
       </item>
@@ -365,8 +365,8 @@ Enter login(NIS) password:&lt;/p&gt;
 À noter : le changement de mot de passe n’est pas immédiat. En général, il faut moins d’une demi-heure pour que les fichiers de mots de passe soient diffusés à toutes les machines.&lt;/p&gt;
 </description>
         <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
-        <link>arcanexil.github.io/SDT//2015/12/05/loguer.html</link>
-        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/loguer.html</guid>
+        <link>arcanexil.github.io//sdt/2015/12/05/loguer.html</link>
+        <guid isPermaLink="true">arcanexil.github.io//sdt/2015/12/05/loguer.html</guid>
         
         
       </item>
@@ -533,8 +533,8 @@ Convertissez-la en PostScript avec xv, puis imprimez le fichier .ps.
 &lt;/sfbx1095.pfb&gt;&lt;/sfrm1095.pfb&gt;&lt;/sfbx1440.pfb&gt;&lt;/sfbx1200.pfb&gt;&lt;/sfrm0800.pfb&gt;&lt;/sfti1095.pfb&gt;&lt;/sfrm0600.pfb&gt;&lt;/sfrm0900.pfb&gt;&lt;/cmsy8.pfb&gt;&lt;/sfcc1095.pfb&gt;&lt;/texps.pro&gt;&lt;/cm-super-t1.enc&gt;&lt;/texc.pro&gt;&lt;/cmbx12.pfb&gt;&lt;/cmr12.pfb&gt;&lt;/cmr10.pfb&gt;&lt;/cmr7.pfb&gt;&lt;/cmr6.pfb&gt;&lt;/cmr8.pfb&gt;&lt;/cmbx10.pfb&gt;&lt;/texps.pro&gt;&lt;/texc.pro&gt;
 </description>
         <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
-        <link>arcanexil.github.io/SDT//2015/12/05/imprimer.html</link>
-        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/imprimer.html</guid>
+        <link>arcanexil.github.io//sdt/2015/12/05/imprimer.html</link>
+        <guid isPermaLink="true">arcanexil.github.io//sdt/2015/12/05/imprimer.html</guid>
         
         
       </item>
@@ -768,8 +768,8 @@ Stockez ailleurs&lt;/p&gt;
 &lt;p&gt;clipper n’est pas votre seule et unique solution pour stocker vos données. Vous pouvez les stocker sur d’autres comptes de l’École : à Montrouge, en salle T pour les matheux… et sur votre ordinateur personnel si vous en avez un, bien sûr. Sous Unix et Linux, utilisez scp ; sous Windows, consultez la page des WinTuteurs sur le transfert de fichiers. Vous pouvez également utiliser FTP.&lt;/p&gt;
 </description>
         <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
-        <link>arcanexil.github.io/SDT//2015/12/05/disque.html</link>
-        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/disque.html</guid>
+        <link>arcanexil.github.io//sdt/2015/12/05/disque.html</link>
+        <guid isPermaLink="true">arcanexil.github.io//sdt/2015/12/05/disque.html</guid>
         
         
       </item>
@@ -934,8 +934,8 @@ Extraire certains fichiers d’une archive ZOO 	zoo -extract fichier.zoo fichier
 Voir le contenu d’une archive ZOO 	zoo -list fichier.zoo&lt;/p&gt;
 </description>
         <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
-        <link>arcanexil.github.io/SDT//2015/12/05/archives.html</link>
-        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/archives.html</guid>
+        <link>arcanexil.github.io//sdt/2015/12/05/archives.html</link>
+        <guid isPermaLink="true">arcanexil.github.io//sdt/2015/12/05/archives.html</guid>
         
         
       </item>
@@ -956,24 +956,9 @@ questionnaire.ps: PostScript document text conforming at level 2.0
 &lt;/code&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
-        <link>arcanexil.github.io/SDT//2015/12/05/memo.html</link>
-        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/memo.html</guid>
+        <link>arcanexil.github.io//sdt/2015/12/05/memo.html</link>
+        <guid isPermaLink="true">arcanexil.github.io//sdt/2015/12/05/memo.html</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;joli page :)&lt;/p&gt;
-</description>
-        <pubDate>Fri, 04 Dec 2015 10:47:42 +0100</pubDate>
-        <link>arcanexil.github.io/SDT//jekyll/update/2015/12/04/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">arcanexil.github.io/SDT//jekyll/update/2015/12/04/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     
@@ -1036,8 +1021,8 @@ Tout et n&#39;importe quoi : diverses commandes très diverses...
 &lt;/div&gt;
 </description>
         <pubDate>Sun, 29 Nov 2015 00:00:00 +0100</pubDate>
-        <link>arcanexil.github.io/SDT//2015/11/29/linux.html</link>
-        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/11/29/linux.html</guid>
+        <link>arcanexil.github.io//sdt/2015/11/29/linux.html</link>
+        <guid isPermaLink="true">arcanexil.github.io//sdt/2015/11/29/linux.html</guid>
         
         
       </item>
@@ -1089,8 +1074,8 @@ Guide de survie sur forum (voir aussi forum)
 
 </description>
         <pubDate>Sun, 29 Nov 2015 00:00:00 +0100</pubDate>
-        <link>arcanexil.github.io/SDT//2015/11/29/debutant.html</link>
-        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/11/29/debutant.html</guid>
+        <link>arcanexil.github.io//sdt/2015/11/29/debutant.html</link>
+        <guid isPermaLink="true">arcanexil.github.io//sdt/2015/11/29/debutant.html</guid>
         
         
       </item>
