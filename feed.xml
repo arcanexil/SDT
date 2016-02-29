@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Le site des tuteurs</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>arcanexil.github.io/SDT//</link>
+    <atom:link href="arcanexil.github.io/SDT//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 29 Feb 2016 19:04:15 +0100</pubDate>
+    <lastBuildDate>Mon, 29 Feb 2016 19:04:15 +0100</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Les répertoires</title>
+        <description>&lt;p&gt;Les répertoires (directories)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Créer et détruire des répertoires
+    mkdir
+    rmdir
+    Exemple :
+Faire un inventaire : ls (list)
+    Utilisation de ls
+    Options de ls
+Se déplacer : cd (change directory)
+    cd sans argument
+    cd suivi d&#39;un nom de répertoire
+    Exemple
+Se repérer : pwd (print working directory)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Le cours Unix du Hublot, pendant l’année 1999-2000, a abordé les notions de répertoire et de fichier. Vous pouvez allez lire Concept : arborescence dans le numéro 3, janvier 2000).
+Créer et détruire des répertoires
+mkdir&lt;/p&gt;
+
+&lt;p&gt;mkdir truc (make directory) : crée un répertoire de nom « truc ».
+rmdir&lt;/p&gt;
+
+&lt;h2 id=&quot;toto&quot;&gt;Toto&lt;/h2&gt;
+&lt;p&gt;rmdir chose (remove directory) : détruit le répertoire de nom « chose ». Cela ne fonctionne que si le répertoire est absolument vide.
+Exemple :&lt;/p&gt;
+
+&lt;p&gt;Au départ j’ai juste un répertoire socio.
+[un seul répertoire]&lt;/p&gt;
+
+&lt;p&gt;mkdir histoire&lt;/p&gt;
+
+&lt;p&gt;[deux répertoires]&lt;/p&gt;
+
+&lt;p&gt;rmdir histoire&lt;/p&gt;
+
+&lt;p&gt;[un seul répertoire]&lt;/p&gt;
+
+&lt;p&gt;Le tilde ~ désigne le home-directory (« répertoire-maison » ; répertoire d’accueil), c’est-à-dire l’utilisateur lui-même, « chez soi » ; par exemple le home-directory de Toto (nom de login toto) est ~toto.&lt;/p&gt;
+
+&lt;p&gt;Exercices sur mkdir et rmdir
+Faire un inventaire : ls (list)
+Utilisation de ls&lt;/p&gt;
+
+&lt;p&gt;ls donne le contenu du répertoire où l’on se trouve, dans l’ordre suivant : symboles, chiffres, majuscules, minuscules. Les fichiers apparaissent sous leur nom, les sous-répertoires ont leur nom suivi d’un slash (par exemple, truc/). Les noms de fichiers suivis d’une étoile sont des exécutables.&lt;/p&gt;
+
+&lt;p&gt;ls nom-de-répertoire donne le contenu du répertoire désigné; là aussi on peut taper par exemple ls -l truc/ pour savoir la taille des fichiers contenus dans le répertoire truc/. Par exemple :&lt;/p&gt;
+
+&lt;p&gt;Si j’ai une arborescence comme celle-ci :
+[~ (egypte.tex, histoire (chronologie, Revolution))]&lt;/p&gt;
+
+&lt;p&gt;corvette ~ $ ls
+egypte.tex
+histoire/
+corvette ~ $ ls -a histoire/
+./
+../
+Revolution
+chronologie&lt;/p&gt;
+
+&lt;p&gt;Options de ls&lt;/p&gt;
+
+&lt;p&gt;ls a un tas d’options, entre autres pour déterminer le critère du tri (tri alphabétique, inverse, par date, etc). Voici les options les plus courantes (pour d’autres options, voir les exercices) :
+ls -l&lt;/p&gt;
+
+&lt;p&gt;Donne la liste des fichiers avec entre autres les droits (possibilité pour d’autres personnes de lire les fichiers, écrire dedans ou les exécuter), la taille (en octets) et la date de dernière modification. Et ls -l donnera (par exemple) :
+Droits 	Liens 	Propriétaire 	Groupe 	Taille 	Date 	Nom
+-rw-r–r– 	1 	robin 	litt98 	  2166 	Aug 30 15:04 	egypte.tex
+drwxr-xr-x 	2 	robin 	litt98 	   512 	Mar  6  2000 	histoire/
+ls -a&lt;/p&gt;
+
+&lt;h2 id=&quot;truc-bidules&quot;&gt;Truc bidules&lt;/h2&gt;
+
+&lt;p&gt;Donne la liste de tous les fichiers, y compris ceux commençant par un point (fichiers de configuration essentiellement).
+ls -F&lt;/p&gt;
+
+&lt;p&gt;C’est l’option qui ajoute un caractère aux noms de fichiers afin de les identifier. L’option -F est activée avec la config conscrits, ce qui explique que, par défaut, ls affiche ces caractères.&lt;/p&gt;
+
+&lt;p&gt;Exercices sur ls
+Se déplacer : cd (change directory)&lt;/p&gt;
+
+&lt;p&gt;cd sert à changer de répertoire :
+cd sans argument&lt;/p&gt;
+
+&lt;p&gt;Ramène au répertoire d’accueil, autrement dit chez soi, au point de départ de l’arborescence du compte.
+cd suivi d’un nom de répertoire&lt;/p&gt;
+
+&lt;p&gt;Sert à aller dans ce répertoire.&lt;/p&gt;
+
+&lt;p&gt;cd histoire/&lt;/p&gt;
+
+&lt;p&gt;place dans le répertoire histoire/.&lt;/p&gt;
+
+&lt;p&gt;cd .. (point point) fait remonter d’un niveau dans l’arborescence.
+Exemple
+[~ (geo, histoire (medievale, moderne (Bourbons, documents)))]&lt;/p&gt;
+
+&lt;p&gt;Supposons que nous nous trouvons dans ~/histoire/moderne/documents/.
+Pour retourner du premier coup au home directory :&lt;/p&gt;
+
+&lt;p&gt;cd&lt;/p&gt;
+
+&lt;p&gt;Si on veut remonter dans moderne (répertoire parent de documents/) :&lt;/p&gt;
+
+&lt;p&gt;cd ..&lt;/p&gt;
+
+&lt;p&gt;Si on veut remonter jusqu’à histoire/ :&lt;/p&gt;
+
+&lt;p&gt;cd ../..&lt;/p&gt;
+
+&lt;p&gt;Si on veut aller dans medievale/ :&lt;/p&gt;
+
+&lt;p&gt;cd ../../medievale&lt;/p&gt;
+
+&lt;p&gt;ou&lt;/p&gt;
+
+&lt;p&gt;cd ~/histoire/medievale&lt;/p&gt;
+
+&lt;p&gt;Si on veut aller de documents dans Bourbons/ :&lt;/p&gt;
+
+&lt;p&gt;cd ../Bourbons&lt;/p&gt;
+
+&lt;p&gt;Pour aller directement d’histoire/ dans documents/ :&lt;/p&gt;
+
+&lt;p&gt;moderne/documents&lt;/p&gt;
+
+&lt;p&gt;Exercices sur cd
+Se repérer : pwd (print working directory)&lt;/p&gt;
+
+&lt;p&gt;pwd affiche le répertoire courant, c’est-à-dire le répertoire où vous vous trouvez actuellement. C’est utile quand le prompt ne l’indique pas. Prenons comme référence l’arborescence de la figure ci-dessus :&lt;/p&gt;
+
+&lt;p&gt;corvette ~/histoire/moderne/documents $ pwd
+/users/98/litt/toto/histoire/moderne/documents
+corvette ~/histoire/moderne/documents $ cd ~/geo
+corvette ~/geo $ pwd
+/users/98/litt/toto/geo&lt;/p&gt;
+
+&lt;p&gt;Comme vous le constatez, c’est l’adresse absolue du répertoire qui est indiquée : pwd indique tous les noms de répertoires traversés depuis la racine (/users) pour l’atteindre. L’adresse relative d’un fichier ou d’un répertoire est donnée par rapport au répertoire personnel de l’utilisateur : « ~ » signifie en fait /users/98/litt/toto (dans le cas de Toto).&lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
+        <link>arcanexil.github.io/SDT//2015/12/05/repertoires.html</link>
+        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/repertoires.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>La machine</title>
+        <description>&lt;p&gt;Présentation technique des machines Unix&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Qu&#39;est-ce qu&#39;une station Sun ?
+Qu&#39;est-ce qu&#39;Unix ?
+Pourquoi Unix est-il meilleur que MS-DOS et MacOS ?
+Quels inconvénients à Unix ?
+Pourquoi les stations Unix ont-elles des noms ?
+Qu&#39;est-ce que root ?
+Peut-on détourner la table d&#39;interruptions ?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Le contenu de cette page est assez aride, mis à part pour les deux premiers paragraphes, et nettement plus difficile à comprendre que le reste de cette documentation. Si vous êtes néophyte en informatique, lisez plutôt notre page d’introduction à Unix.
+Qu’est-ce qu’une station Sun ?&lt;/p&gt;
+
+&lt;p&gt;Sun Microsystems est un fabricant américain d’ordinateurs, qui vend(ait) les ordinateurs qui équipaient l’ENS il y a quelques années. Le mot « station » est une abréviation de « station de travail », un vieux vocable désignant les machines reliées en réseau et disposant d’une puissance de calcul propre (différant en cela des terminaux).
+Qu’est-ce qu’Unix ?&lt;/p&gt;
+
+&lt;p&gt;Unix est le nom générique d’un certain type de systèmes d’exploitation pour machines haut de gamme. Pour des raisons historiques, ces machines se regroupent en (en gros) deux catégories, System V et BSD. La version qui tourne sur les stations Sun de l’ENS s’appelle Solaris, c’est un System V. La plupart des PC de l’ENS tournent sous Fedora, une distribution Linux. Ce n’est pas à proprement parler un Unix (il n’appartient à aucune des deux familles BSD et SystemV), mais son fonctionnement est très voisin de celui d’Unix. La présence de deux systèmes différents explique les petites différences de comportement que vous pouvez observer entre les stations Sun et les PC FreeBSD.&lt;/p&gt;
+
+&lt;p&gt;Unix est sans conteste le système préféré des informaticiens de l’ENS. Veuillez donc m’excuser d’être partial dans les questions qui vont suivre…
+Pourquoi Unix est-il meilleur que MS-DOS et MacOS ?&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Multitâche : une machine Unix peut lancer plusieurs programmes à la fois, et ce avec une efficacité inconnue sous les systèmes d&#39;exploitation susmentionnés. Ceux-ci sont en effet incapables de faire autre chose pendant qu&#39;ils accèdent à leurs périphériques (par exemple, pour écrire ou lire sur le disque dur), et perdent donc le plus clair de leur temps à attendre. Il est tout à fait possible sous Unix de rédiger un mémoire dans une fenêtre avec quatre versions de brouillon tout autour, et ce pendant qu&#39;un gros fichier se télécharge...
+Multi-utilisateurs : une station Unix peut servir plusieurs utilisateurs en même temps, et les protéger les uns des autres au moyen des mots de passe et de droits d&#39;accès. Personne ne peut lire votre courrier électronique à votre place, et si vous désirez garder confidentiel un document, c&#39;est possible !
+Protection mémoire : aucun programme ne peut faire planter le système ; si il tente d&#39;effectuer une opération qui devrait avoir ce résultat, il sera terminé de force, sans conséquences pour le reste du système. L&#39;allégation que Windows ou Mac OS possèdent cette qualité est une plaisanterie.
+Sécurité : en règle générale, le système n&#39;est pas prévu pour respecter les impératifs ci-dessus dans la plupart des cas, mais dans tous les cas, si bien que faire planter l&#39;ordinateur ou contourner les protections est un véritable challenge (même si ce n&#39;est malheureusement pas impossible). De plus, la découverte d&#39;un tel « trou de sécurité » occasionne une réaction consciencieuse de la part du vendeur du système d&#39;exploitation, qui fournit continuellement de nouvelles versions pour que l&#39;administrateur système ait toujours une longueur d&#39;avance sur le pirate. On ne peut certes pas en dire autant de Microsoft ni Apple...
+Fiabilité :clipper, le serveur des élèves, point névralgique du résdeau de l&#39;École, ne réamorce en moyenne qu&#39;une fois tous les trois mois (et pour faire des opérations de maintenance, rajouter des disques durs, etc.) ! Cela permet de faire de très longs calculs sur plusieurs semaines, ou bien de faire de nuit de grosses opérations réseau.
+Fonctionnalité : toutes les stations Sun et les PC sous FreeBSD gèrent le réseau dans les deux sens. On peut s&#39;y connecter à distance, on peut lancer un programme sur une machine et avoir l&#39;affichage sur une autre, etc. Unix fournit toujours au programmeur plus de possibilités que sur tout autre système, toutes choses égales par ailleurs (c&#39;est-à-dire sans acheter de kit de développement supplémentaire) : il existe des compilateurs gratuits et la rétention d&#39;information n&#39;y est pas de mise.
+Configurabilité : le système Unix est construit pour avoir le moins possible de présupposés du genre « les extensions système sont toutes dans le dossier du même nom » (respectivement, « dans C:\WINDOWS\SYSTEM »). C&#39;est pourquoi Unix est extrêmement configurable et s&#39;adapte à tous types d&#39;environnement, de la plus petite à la plus grosse des machines, avec ou sans réseau, et quelle que soit la marque de l&#39;ordinateur considéré.
+Portabilité : les différents constructeurs d&#39;Unix se sont mis d&#39;accord depuis longtemps sur toutes les normes utiles à leur travail. La conséquence est qu&#39;un programme écrit pour SunOS tournera sans aucune modification sous Solaris.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Quels inconvénients à Unix ?&lt;/p&gt;
+
+&lt;p&gt;Bon, soyons vraiment honnêtes : la qualité d’Unix se traduit par un aspect spartiate décourageant, et il est vrai que la sécurité coûte un peu en performances (mais la puissance correspondante est de toute façon perdue sous Windows 95 ou MacOS). Pourtant, si autant d’efforts avaient été consacrés à l’aspect extérieur d’Unix qu’il y en eut pour Windows et le Système 7, nul doute qu’il les ridiculiserait aujourd’hui sur tous les tableaux ! Mais programmer des interfaces utilisateur est un travail long et peu passionnant (c’est toujours la même chose), et l’histoire d’Unix est surtout faite de programmeurs bénévoles.&lt;/p&gt;
+
+&lt;p&gt;Depuis plusieurs années, avec le développement de Linux et son ouverture au grand public, des interfaces graphiques se développent; citons en particulier KDE (dont une partie des logiciels sont installés sur les stations), Gnome, etc. Unix ne se traduit plus forcément par « interface fruste »…
+Pourquoi les stations Unix ont-elles des noms ?&lt;/p&gt;
+
+&lt;p&gt;Parce qu’il est plus facile de dire « trimaran » que « la station Sun 4 située à gauche le mur Sud de la salle S ». Il est également plus facile de dire « trimaran » que « la station trimaran » (ou même pire, « la station 42 »), ce qui conduit à une personnalisation affectueuse (certains diront lobotomique) des machines par les habitués…&lt;/p&gt;
+
+&lt;p&gt;Quoi qu’il en soit, les machines administrées par le SPI sont repérables au fait qu’elles ont un nom de bateau ; parmi elles, clipper est le serveur des élèves à Ulm (il est dans une salle du niveau -2 du DI climatisée et inaccessible au commun des mortels) ; vedette est le serveur de Jourdan ; paquebot est le serveur de Montrouge.&lt;/p&gt;
+
+&lt;p&gt;Les autres groupements de machines respectent également l’unité de noms : ainsi, les machines du DMI ont un nom de végétal ou de champignon, dont l’embranchement caractérise le bâtiment et l’étage, et les machines des biologistes ont des noms de dieux (horus est leur serveur).&lt;/p&gt;
+
+&lt;p&gt;Pour connaître le nom d’une machine dans une salle d’informatique élèves, il y a deux méthodes :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Sur la mire de login, la machine steamer (par exemple) affiche steamer login: (c&#39;est le cas le plus simple). Et pour un utilisateur de la config conscrits, le nom de sa machine apparaît dans l&#39;invite de ses fenêtres de terminal une fois qu&#39;il est logué ; par exemple :
+
+    steamer ~ $
+  
+
+Vous pouvez obtenir un plan de salle avec la commande qui :
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;qui 	Salle S
+qui t 	Salle T
+qui i 	Infi
+qui j 	Salle de Jourdan
+qui m 	Salle de Montrouge
+qui p 	Salle des physiciens
+Qu’est-ce que root ?&lt;/p&gt;
+
+&lt;p&gt;root est le nom de login traditionnel de l’administrateur système. Il a tous les droits, c’est-à-dire qu’aucune opération ne lui sera refusée sous prétexte qu’elle outrepasse la limite de l’utilisateur root (par contre, il est toujours sous le coup de la protection contre le plantage par exemple). Il peut donc lire votre courrier électronique, savoir quels programmes vous avez utilisés, suspendre ou fermer votre compte, etc. Ces droits sont nécessaires à assurer le fonctionnement du système : que feriez-vous sinon lorsque vous oubliez votre mot de passe ?&lt;/p&gt;
+
+&lt;p&gt;Mais à l’ENS, les administrateurs sont intègres et dignes de confiance et ne se servent presque jamais de ce droit de « super-utilisateur » : même si votre boîte aux lettres électronique déborde, l’administrateur en fait une copie chez vous et ne regarde pas dedans (le cas s’est déjà présenté).&lt;/p&gt;
+
+&lt;p&gt;« Devenir root » est un fantasme courant d’une certaine frange de la population de la salle S, parce que c’est interdit et théoriquement impossible (donc tentant) et que les informaticiens se divisent en deux sous-castes : ceux qui savent passer root sans y être autorisés et les autres… C’est la raison d’être de la banderole en salle S. N’oubliez jamais que Jacques Beigbeder n’est pas un imbécile, et que si vous vous faites prendre la sanction sera très lourde…&lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
+        <link>arcanexil.github.io/SDT//2015/12/05/machine.html</link>
+        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/machine.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Se loguer</title>
+        <description>&lt;p&gt;Se loguer et se déloguer&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Comment obtient-on un compte ?
+Comment se loguer ? Comment se déloguer ?
+Comment choisir son environnement graphique ?
+Changer son mot de passe
+    Le quoi et le pourquoi
+    Choisir un mot de passe
+    Changer votre mot de passe
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Comment obtient-on un compte ?&lt;/p&gt;
+
+&lt;p&gt;Les stations Unix sont munies d’un système de contrôle d’accès par mot de passe. Ce n’est pas (uniquement) du flicage, cela permet également de protéger les utilisateurs contre les fausses manœuvres (ou les mauvaises intentions !) de leurs semblables : l’ordinateur sait qui est qui, et il n’autorise pas n’importe quelle opération.&lt;/p&gt;
+
+&lt;p&gt;Cela signifie que, si ça n’a pas déjà été fait à votre rentrée de conscrit, vous devez vous faire ouvrir un compte, en vous présentant au bureau d’un membre du SPI.&lt;/p&gt;
+
+&lt;p&gt;Lors de l’ouverture du compte, il vous sera remis un login (une abréviation en huit lettres et malheureusement invariable de votre patronyme), et votre premier mot de passe. VOUS NE DEVEZ LE DIVULGUER À PERSONNE, SOUS AUCUN PRÉTEXTE, NI AUCUN DE CEUX QUE VOUS CHOISIREZ PAR LA SUITE !&lt;/p&gt;
+
+&lt;p&gt;Aucune personne de l’administration (le SPI) ou des organisations élèves (les tuteurs, les gourous) n’a besoin de votre mot de passe, même pour faire à votre place certaines opérations sur votre compte (il est possible de donner une procuration électronique). Ceux qui vous prétendront le contraire soit seront mal intentionnés, soit voudront squatter votre compte parce qu’ils n’en ont pas eux-mêmes à l’ENS.&lt;/p&gt;
+
+&lt;p&gt;Vous vous y engagez de toute façon dans la Charte d’utilisation des moyens informatiques signée lors de l’ouverture de votre compte.
+Comment se loguer ? Comment se déloguer ?&lt;/p&gt;
+
+&lt;p&gt;Dans le jargon informaticien, l’action de se présenter à l’ordinateur s’appelle le login, et le verbe dérivé est « se loguer ». La procédure décrite ici est celle pour se loguer sur les PC sous Ubuntu qui équipent les salles en libre service en 2011.&lt;/p&gt;
+
+&lt;p&gt;Lorsqu’il est disponible, un PC sous Ubuntu affiche une boîte de dialogue du genre « Welcome to goelette » vous invitant à vous identifier. Installez-vous, et tapez votre nom de login. Attendez que l’ordinateur affiche « Password » à la place de « Username », et tapez votre mot de passe, puis Entrée.&lt;/p&gt;
+
+&lt;p&gt;Suivant votre promo, si c’est la première fois que vous vous loguez ou que vous utilisez Gnome, il est possible que l’ordinateur vous propose d’installer les options spécifiques à l’ENS. Acceptez.&lt;/p&gt;
+
+&lt;p&gt;La machine va ramer quelques instants et lancer la config conscrit KDE (ou tout autre environnement graphique que vous auriez choisi, voir plus bas pour les détails).&lt;/p&gt;
+
+&lt;p&gt;Quand vous voulez partir, il faut vous déloguer, c’est-à-dire quitter pour que la machine soit disponible pour la personne suivante ; si vous ne le faites pas, toute personne qui vient derrière vous peut utiliser votre compte ! Sous la config Gnome, choisissez simplement « Déconnexion » dans le menu en haut à droite de l’écran. Puis confirmez.&lt;/p&gt;
+
+&lt;p&gt;On peut aussi utiliser la combinaison de touches CRTL-méta-backspace (pratique quand la souris en répond plus).
+Comment choisir son environnement graphique ?&lt;/p&gt;
+
+&lt;p&gt;Le système installé sur les PC des salles en libre service donne le choix entre plusieurs environnements graphiques. Depuis la rentrée 2010, la config conscrit utilise Gnome : choisir Gnome démarrera une interface graphique moderne, configurée par des élèves et anciens expérimentés, les gourous, pour vous permettre d’accéder facilement aux ressources informatiques de l’école. C’est le choix par défaut pour les conscrits : cette section s’adresse donc aux vieux cons qui voudraient passer à la nouvelle config, ou aux conscrits qui voudraient essayer autre chose.
+Les trois paragraphes suivants ne sont probablement pas à jour.&lt;/p&gt;
+
+&lt;p&gt;Pour choisir votre environnement de travail, avant de vous loguer, cliquez sur Session, en haut à gauche de la boîte de dialogue qui vous demande votre nom d’utilisateur. Cela ouvrira un menu présentant les différents environnements disponibles. Outre Gnome, vous y trouverez quelques autres environnements comme KDE ou Xfce. Aucune configuration spécifique à l’ENS n’est proposée pour ces derniers en 2011.&lt;/p&gt;
+
+&lt;p&gt;Entrez ensuite votre login et votre mot de passe comme d’habitude. Il se peut qu’une nouvelle boîte de dialogue vous demande si vous souhaitez faire de l’environnement choisi votre session par défaut : cliquez sur « Make default », cela vous évitera de retourner le chercher dans le menu à chaque fois que vous voudrez vous loguer. Vous pourrez toujours revenir sur votre décision en le demandant explicitement.&lt;/p&gt;
+
+&lt;p&gt;Si c’est la première fois que vous utilisez Gnome, l’ordinateur vous proposera d’installer les options spécifiques à l’ENS. Pour passer à la nouvelle config conscrit, acceptez. (Si vous vous êtes déjà fait votre propre config Gnome et que vous ne voulez pas la voir écrasée, refusez.)
+Changer son mot de passe&lt;/p&gt;
+
+&lt;p&gt;C’est la première chose à faire après l’ouverture de votre compte…
+Le quoi et le pourquoi&lt;/p&gt;
+
+&lt;p&gt;Le mot de passe est, vous l’aurez compris, un élément clé de la sécurité de votre compte et des informations qu’il contient, mais aussi de votre « personnalité informatique » : vous êtes responsable de ce que vous faites à partir de votre compte (les courriers que vous envoyez, etc.). Si un intrus vole votre mot de passe, il pourra usurper votre identité pour commetre des actions malintentionnées et c’est vous qui en subirez les conséquences. Sachez qu’en raison du raccordement de l’ENS à l’Internet, vous devez vous méfier d’une population infiniment plus vaste que la communauté normalienne !&lt;/p&gt;
+
+&lt;p&gt;Un minimum de paranoïa s’impose donc à propos de votre mot de passe : comme un code de Carte bleue, il est STRICTEMENT PERSONNEL. Vous ne devez pas le noter sur un papier, vous ne devez en aucun cas le communiquer à quiconque, même pour donner procuration sur votre compte. Si vous le divulguez par erreur (par exemple, en confondant les moments de taper votre login et votre mot de passe…), vous devez en changer immédiatement. Vous devez aussi en changer à chaque fois que le SPI vous le demande, à la réception de votre compte, et lorsque vous craignez d’avoir été piraté.
+Attention : ni le SPI, ni les Gourous, ni les Tuteurs ne vous demanderont jamais votre mot de passe. Ne le leur donnez pas non plus spontanément, ils n’en ont pas besoin pour vous répondre et vous aider.
+Choisir un mot de passe&lt;/p&gt;
+
+&lt;p&gt;Pour des raisons de sécurité, choisir un mot de passe n’est pas si simple. Il faut qu’il comporte au moins six caractères, qu’il contienne des majuscules, des minuscules et des signes non-alphabétiques (chiffres ou ponctuation), et surtout qu’il ne soit pas trop proche d’un mot du dictionnaire ni d’une donnée qui vous est personnelle (votre nom de login, votre date de naissance, etc.)&lt;/p&gt;
+
+&lt;p&gt;Toutes ces précautions ont pour but de vous protéger contre les attaques dites à dictionnaire, qui consistent à essayer de deviner votre mot de passe en en essayant des milliers et en espérant que votre mot de passe ressemble à un mot d’un dictionnaire. Plus votre mot de passe ne veut rien dire, plus il est sûr par rapport à ce genre d’attaques !&lt;/p&gt;
+
+&lt;p&gt;Une excellente et mnémotechnique façon de choisir un mot de passe est de prendre les initiales de tous les mots d’un poème que vous connaissez, mais rajoutez tout de même quelques chiffres ou variations en majuscules.&lt;/p&gt;
+
+&lt;p&gt;Si vous êtes à court d’idées, utilisez le programme APG (comme Automated Password generator, c’est-à-dire « générateur automatique de mots de passe »). Tapez simplement apg pour obtenir une liste de 6 mots de passe. Vous pouvez recommencer jusqu’à en trouver un qui vous plaît.&lt;/p&gt;
+
+&lt;p&gt;Pour produire des mots de passe conformes à la politique de sécurité de l’ENS, utilisez l’option -M N qui exige l’inclusion d’un ou plusieurs chiffres dans le mot de passe. Il peut être également très pratique de rajouter l’option -t qui permet d’afficher la prononciation du mot de passe :&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ apg -t -M N
+natbyn7 (nat-byn-SEVEN)
+whon3ok (whon-THREE-ok)
+vajmyik4 (vaj-myik-FOUR)
+epijyec3 (ep-ij-yec-THREE)
+eymraf9 (eym-raf-NINE)
+jeygs3 (jeygs-THREE)&lt;/p&gt;
+
+&lt;p&gt;Entre parenthèses, à droite du mot de passe proposé, figure sa prononciation (anglaise), ce qui vous permet de mieux retenir votre nouveau mot de passe. Pour plus de sécurité, vous pouvez également utiliser l’option -M C, qui mêle majuscules et minuscules.&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ apg -t -M NC
+PakCod0 (Pak-Cod-ZERO)
+ekMyk6 (ek-Myk-SIX)
+prubEn3 (prub-En-THREE)
+HykVav2 (Hyk-Vav-TWO)
+VepOt4 (Vep-Ot-FOUR)
+kijEs9 (kij-Es-NINE)&lt;/p&gt;
+
+&lt;p&gt;Enfin, si vous voulez encore plus de sécurité, quitte à frôler la paranoïa, vous pouvez choisir de générer un mot de passe absolument aléatoire, présentant donc de très fortes chances d’être absolument imprononçable. Par défaut, apg génère en effet des mots de passe prononçables, mais vous pouvez désactiver ce mode par défaut avec l’option -a 1. Vous obtiendrez par exemple :&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ apg -a 1 -M NC
+ZM9SX0S9O0
+ZIRU7XIR3
+ZLOPH9XJ
+EVHLZWE2
+W6HSRS9JXC
+29IIU89EO&lt;/p&gt;
+
+&lt;p&gt;Changer votre mot de passe&lt;/p&gt;
+
+&lt;p&gt;Pour des raisons techniques, on ne peut pas toujours (suivant l’évolution de la config des machines de l’école) changer son mot de passe depuis n’importe quelle machine des salles info. Le plus simple est de commencer par se connecter sur le serveur des élèves, sas, en tapant dans une fenêtre de terminal la commande ssh sas.eleves :&lt;/p&gt;
+
+&lt;p&gt;trimaran ~ $ ssh sas.eleves
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.2.0-54-generic x86_64)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Documentation:  https://help.ubuntu.com/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;86 packages can be updated.
+41 updates are security updates.&lt;/p&gt;
+
+&lt;p&gt;No mail.
+Last login: Sat Oct 19 23:46:59 2013 from gam92-1-78-192-93-110.fbxo.proxad.net
+sas ~ $&lt;/p&gt;
+
+&lt;p&gt;Une fois que vous avez choisi votre nouveau mot de passe, tapez toujours dans la fenêtre de terminal passwd :&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ passwd
+passwd:  Changing password for toto
+Enter login(NIS) password:&lt;/p&gt;
+
+&lt;p&gt;Tapez ensuite votre mot de passe actuel, puis Entrée. Le programme demande votre nouveau mot de passe, puis le redemande (ainsi, on est sûr que c’est le bon mot de passe, ou du moins que vous avez fait deux fois la même faute de frappe !).
+À noter : le changement de mot de passe n’est pas immédiat. En général, il faut moins d’une demi-heure pour que les fichiers de mots de passe soient diffusés à toutes les machines.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
+        <link>arcanexil.github.io/SDT//2015/12/05/loguer.html</link>
+        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/loguer.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Imprimer</title>
+        <description>&lt;p&gt;Imprimer&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Choisir une imprimante
+Partager les imprimantes
+    lpq
+    lprm
+Qu&#39;est-ce que le PostScript ?
+    Présentation
+    Créer un fichier PostScript
+    Créer un fichier PostScript à partir d&#39;un DVI
+    Afficher un PostScript
+    Imprimer un PostScript
+Les commandes d&#39;impression
+    lpr
+    dvips
+En pratique, je veux imprimer...
+    Un courrier électronique
+    Une page Web
+    Un fichier DVI
+    Un fichier PostScript
+    Une image
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;À consulter également :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;la page du SPI pour savoir quelles sont les imprimantes disponibles
+la FAQ sur la vie en salle info
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Choisir une imprimante&lt;/p&gt;
+
+&lt;p&gt;Il y a une imprimante dans chaque salle info : quand vous lancez une impression depuis un logiciel en mode graphique, vérifiez bien que vous imprimez dans la salle où vous vous trouvez !&lt;/p&gt;
+
+&lt;p&gt;En mode graphique, les logiciels Gnome vous proposent une boîte de dialogue avec une liste déroulante permettant de choisir l’imprimante. L’imprimante d’une salle comporte l’indication de la salle dans son nom, par exemple, lwinfo3 est l’imprimante de la salle S. En fait, les imprimantes qui savent imprimer en recto-verso apparaissent une seconde fois, avec le suffixe -2. Choisir cette deuxième variante active le mode recto-verso : par exemple, imprimer sur lwinfo3-2 permet d’imprimer en recto-verso sur l’imprimante de la salle S. Tout ça (la localisation de l’imprimante et le mode recto-verso éventuel) est rappelé dans la description qui apparaît en-dessous quand vous cliquez sur le nom de l’imprimante.&lt;/p&gt;
+
+&lt;p&gt;Si vous avec des difficultés pour imprimer (ce qui arrive assez souvent, les imprimantes sont des machines capricieuses), n’hésitez pas à demander un coup de main aux tuteurs.
+Partager les imprimantes&lt;/p&gt;
+
+&lt;p&gt;Les imprimantes sont partagées entre les élèves, ce qui impose quelques règles de savoir-vivre : vérifier ce que fait l’imprimante avant d’envoyer une nouvelle impression, supprimer une impression si on doit partir, si l’imprimante est bloquée, s’il n’y a plus de papier, etc. Deux commandes vous aideront à ce faire, lpq et lprm.
+lpq&lt;/p&gt;
+
+&lt;p&gt;lpq (comme line printer queue) indique la liste des documents à imprimer en attente dans la queue de l’imprimante, la personne qui les a envoyés, leur taille, leur numéro (dans la colonne Job), leur taille et l’heure à laquelle ils ont été envoyés. Par exemple :&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ lpq 
+Printer: lp is lwsalles@snekkar
+Printer: lwsalles@snekkar  ‘HP 4200 Salle S’
+ Queue: 1 printable job
+ Server: pid 14662 active
+ Unspooler: pid 14663 active
+ Status: printing ‘toto@drakkar’, file 1 ‘(stdin)’, size 215136, format ‘f’ at 10:34:57
+ Rank   Owner/ID                   Class Job  Files               Size  Time  &lt;br /&gt;
+active  toto    @drakkar              A  760 (stdin)           215136  10:34:57&lt;/p&gt;
+
+&lt;p&gt;Vous savez donc qu’un utilisateur dont le login est « toto », logué sur la machine drakkar, est en train d’imprimer un document qui fait 215136 octets (210 Ko). Le numéro attribué à cette impression est 760.&lt;/p&gt;
+
+&lt;p&gt;Si personne n’a lancé d’impression, lpq vous répondra seulement ceci :&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ lpq
+Printer: lp is lwsalles@snekkar
+Printer: lwsalles@snekkar  ‘HP 4200 Salle S’
+ Queue: no printable jobs in queue
+ Status: server finished at 10:42:16&lt;/p&gt;
+
+&lt;p&gt;lprm&lt;/p&gt;
+
+&lt;p&gt;lprm (comme line printer remove) : sans arguments, cette commande supprime tous les documents en attente dans la queue (à condition que l’impression n’ait pas encore commencé). Avant de tout supprimer, demandez leur avis aux personnes qui ont lancé des impressions (voir la partie sur lpq)…&lt;/p&gt;
+
+&lt;p&gt;lprm numéro supprime l’impression de numéro tant (utile quand on renonce finalement à imprimer son fichier).
+Note : la commande lprm ne supprime que les documents dans la queue. Si le processus d’impression a déjà commencé, on ne peut l’annuler qu’en appuyant sur le bouton « reset » de l’imprimante.
+Qu’est-ce que le PostScript ?
+Présentation&lt;/p&gt;
+
+&lt;p&gt;Le PostScript est un format utilisé initialement pour décrire une page à une imprimante. Il est conçu comme un langage de programmation totalement opérationnel, et permet donc de faire des choses vraiment très souples. Un document PostScript décrit exactement l’aspect graphique d’une page.&lt;/p&gt;
+
+&lt;p&gt;C’est le format d’impression standard des Macintosh et des machines Unix, ainsi que celui qu’utilisent la plupart des imprimantes laser haut de gamme. Comme l’aspect graphique d’un document PostScript est parfaitement spécifié et que PostScript est un format standard, il est fréquemment utilisé pour diffuser des documents dont la mise en page doit être exactement préservée. Toutefois, il est actuellement supplanté dans cet usage par le format PDF qui en est dérivé.
+Créer un fichier PostScript&lt;/p&gt;
+
+&lt;p&gt;Les logiciels incluent le plus souvent le format PostScript dans leurs formats possibles de sauvegarde. Par exemple, avec Mozilla, quand vous téléchargez un document, vous avez le choix entre le texte brut, le fichier HTML complet ou un fichier PostScript.
+Créer un fichier PostScript à partir d’un DVI&lt;/p&gt;
+
+&lt;p&gt;Un fichier DVI est un fichier résultant de la compilation d’un fichier LaTeX. Pour le transformer en fichier PostScript, on utilise la commande dvips.&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ dvips dissert.dvi -o
+This is dvips(k) 5.90a Copyright 2002 Radical Eye Software (www.radicaleye.com)
+‘ TeX output 2000.03.01:0202’ -&amp;gt; dissert.ps&lt;/p&gt;
+&lt;texc.pro&gt;&lt;texps.pro&gt;. &lt;cmbx10.pfb&gt;&lt;cmr8.pfb&gt;&lt;cmr6.pfb&gt;&lt;cmr7.pfb&gt;&lt;cmr10.pfb&gt;
+&lt;cmr12.pfb&gt;&lt;cmbx12.pfb&gt;[1] [2] [3] [4] [5] [6] [7]
+
+Après un petit charabia technique, dvips vous indique donc qu&#39;il a transformé votre document en fichier PostScript qui fait 7 pages. L&#39;argument -o (o comme output, résultat) placé à la fin signifie qu&#39;on veut garder le même nom de fichier. Ainsi, dvips dissert.dvi -o produit automatiquement le fichier dissert.ps Si vous voulez spécifier un autre nom, la syntaxe est légèrement différente :
+
+sas ~ $ dvips -o dissertation.ps dissert.dvi
+This is dvips(k) 5.90a Copyright 2002 Radical Eye Software (www.radicaleye.com)
+&#39; TeX output 1999.12.03:1601&#39; -&amp;gt; dissertation.ps
+&lt;texc.pro&gt;&lt;cm-super-t1.enc&gt;&lt;texps.pro&gt;. &lt;sfcc1095.pfb&gt;&lt;cmsy8.pfb&gt;
+&lt;sfrm0900.pfb&gt;&lt;sfrm0600.pfb&gt;&lt;sfti1095.pfb&gt;&lt;sfrm0800.pfb&gt;&lt;sfbx1200.pfb&gt;
+&lt;sfbx1440.pfb&gt;&lt;sfrm1095.pfb&gt;&lt;sfbx1095.pfb&gt;[1] [2] [3] [4] [5] [6] [7] 
+
+Quand vous faites du LaTeX, il est plus fiable de visualiser le résultat final en regardant le PostScript, plutôt que le DVI. L&#39;afficheur gv (pour GhostView), qui affiche les fichiers PostScript, est plus fiable que XDvi pour les dessins ou les mises en page bizarres. Par contre, ils sont beaucoup plus gros que les documents .dvi; il faut donc soit les compresser (voir gzip) soit les effacer quand on n&#39;en a pas besoin.
+Afficher un PostScript
+
+Utilisez le logiciel gv (pour GhostView). Entre autres choses, il vous permet de marquer les pages, pour n&#39;imprimer que les pages sélectionnées. GhostView est également disponible pour Windows (sous le nom de GSView) et Mac OS (sous le nom de MacGSView).
+Imprimer un PostScript
+
+On utilise simplement la commande lpr.
+Les commandes d&#39;impression
+lpr
+
+lpr imprime un fichier PostScript. Pour imprimer en recto-verso, on utilise l&#39;option -Zdouble :
+
+lpr -Zdouble hublot4.ps
+
+dvips
+
+La commande dvips imprime les documents .dvi, produits par LaTeX. Il y a plusieurs options à cette commande, dont celles-ci (pour savoir toutes les options, regardez le man, ou taper dvips tout court, sans argument) :
+-p 	indique le numéro de la première page à imprimer.
+-l (last) 	indique le numéro de la dernière page à imprimer.
+-pp num-num (pages) 	Imprimer les pages tant à tant.
+
+Par exemple :
+
+dvips -p 5 document.dvi
+
+	Imprimer le document à partir de la page 5.
+
+dvips -l 3 document.dvi
+
+	Imprimer jusqu&#39;à la page 3.
+
+dvips -pp 8-11 document.dvi
+
+	Imprimer de la page 8 à la page 11.
+
+dvips -pp 7 document.dvi
+
+	Imprimer la page 7.
+
+dvips sert aussi à produire les fichiers PostScript (voir ci-dessus).
+En pratique, je veux imprimer...
+
+Les commandes à taper pour ouvrir ou imprimer des fichiers de différents types de formats se trouvent sur l&#39;aide-mémoire sur les formats.
+Un courrier électronique
+
+Touche % (pourcent) avec pine, touche p (print) avec mutt.
+Une page Web
+
+Cliquer sur le bouton Print de Mozilla, ou sélectionner Print dans le menu File, ou taper Ctrl-P.
+Un fichier DVI
+
+Taper dvips fichier.dvi.
+Un fichier PostScript
+
+Taper lpr fichier.ps.
+Une image
+
+Convertissez-la en PostScript avec xv, puis imprimez le fichier .ps. 
+&lt;/sfbx1095.pfb&gt;&lt;/sfrm1095.pfb&gt;&lt;/sfbx1440.pfb&gt;&lt;/sfbx1200.pfb&gt;&lt;/sfrm0800.pfb&gt;&lt;/sfti1095.pfb&gt;&lt;/sfrm0600.pfb&gt;&lt;/sfrm0900.pfb&gt;&lt;/cmsy8.pfb&gt;&lt;/sfcc1095.pfb&gt;&lt;/texps.pro&gt;&lt;/cm-super-t1.enc&gt;&lt;/texc.pro&gt;&lt;/cmbx12.pfb&gt;&lt;/cmr12.pfb&gt;&lt;/cmr10.pfb&gt;&lt;/cmr7.pfb&gt;&lt;/cmr6.pfb&gt;&lt;/cmr8.pfb&gt;&lt;/cmbx10.pfb&gt;&lt;/texps.pro&gt;&lt;/texc.pro&gt;
+</description>
+        <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
+        <link>arcanexil.github.io/SDT//2015/12/05/imprimer.html</link>
+        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/imprimer.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Place disque</title>
+        <description>&lt;p&gt;Place disque&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Taille de fichiers et de répertoires : du
+    Connaître la taille d&#39;un répertoire
+    Connaître la taille totale de son compte
+    Connaître la taille d&#39;un fichier
+    Application : quels sont les plus gros fichiers de votre compte ?
+    Application : quelle est la taille de votre boîte aux lettres ?
+Taille d&#39;une partition : df
+Recommandations
+    Ne stockez pas n&#39;importe quoi sur votre compte !
+    Rangez votre courrier
+    Faites le ménage chez vous
+    Stockez ailleurs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;clipper, le serveur principal de l’ENS, héberge de nombreux comptes : ceux de tous les élèves, des jeunes archicubes, des magistériens et autres invités, ce qui représente un total de plus de 2000 comptes. Les comptes sont regroupés par année de promotion, toutes disciplines confondues.&lt;/p&gt;
+
+&lt;p&gt;Chaque promotion dispose d’une partition (sorte de disque dur virtuel) séparée sur laquelle est stockée ses données. Il n’y a pas de système de quotas par personne, mais la place totale occupée par une promotion est limitée… à la taille de la partition. Si une partition est pleine, plus personne ne peut enregistrer de données, rendant ainsi tout travail impossible.&lt;/p&gt;
+
+&lt;p&gt;Le courrier électronique est, lui, stocké dans /var/mail et dans /d. Si ces partitions sont pleines, plus personne ne peut envoyer ni recevoir de courrier.&lt;/p&gt;
+
+&lt;p&gt;Faire attention à l’espace disque que l’on prend est donc à la fois une nécessité, et une obligation (la charte des moyens informatiques que vous avez signée l’exige). Deux outils vous permettent de contrôler la taille de vos fichiers et celle de votre compte : du et df.
+Taille de fichiers et de répertoires : du
+Connaître la taille d’un répertoire&lt;/p&gt;
+
+&lt;p&gt;La commande du (disk usage) indique la taille de vos répertoires et sous-répertoires. Sur certains systèmes, du indique la taille des fichiers en blocs et non en Ko, prenez donc le réflexe d’ajouter l’option -k (kilobytes).&lt;/p&gt;
+
+&lt;p&gt;L’option -h est aussi très utile : elle donne des résultats beaucoup plus lisibles par un humain (la taille est exprimée en Ko, Mo ou Go quand c’est possible).
+À noter : certaines commandes basiques comme ps ou du n’ont pas le même comportement sur les stations Sun (sous Solaris) et les PC (sous Linux). Reportez-vous aux pages de man (l’aide en ligne) pour vérifier quelles sont les options disponibles sur chaque système.&lt;/p&gt;
+
+&lt;p&gt;Par exemple, voici le contenu du répertoire « histoire » de Toto (arborescence donnée dans le cours sur les répertoires) :&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ du -k histoire
+1973    histoire/maitrise
+127     histoire/sources/AN
+36      histoire/sources/divers
+30      histoire/sources/etudes
+38      histoire/sources/godefroy
+335     histoire/sources/images
+62      histoire/sources/memoires/saint-simon
+161     histoire/sources/memoires
+141     histoire/sources/mscrits
+913     histoire/sources
+2023    histoire/dea
+4910    histoire&lt;/p&gt;
+
+&lt;p&gt;La dernière ligne indique la taille totale du répertoire « histoire », avec tout ce qu’il contient, soit 4 910 Ko.&lt;/p&gt;
+
+&lt;p&gt;Ajouter l’option -h (comme « human readable ») donne des résultats plus lisibles :&lt;/p&gt;
+
+&lt;p&gt;brick ~ $ du -h histoire
+2.0M    histoire/maitrise
+127K    histoire/sources/AN
+36K     histoire/sources/divers
+30K     histoire/sources/etudes
+38K     histoire/sources/godefroy
+335K    histoire/sources/images
+62K     histoire/sources/memoires/saint-simon
+161K    histoire/sources/memoires
+141K    histoire/sources/mscrits
+913K    histoire/sources
+2.0M    histoire/dea
+4.8M    histoire&lt;/p&gt;
+
+&lt;p&gt;Note : souvenez-vous que les ordinateurs comptent de manière binaire et non décimale. Un kilo-octets vaut donc 1 024 octets, et non 1 000. Un méga-octet vaut 1 024 Ko et non 1 000, et donc en tout 1 048 576 octets. Diviser par 1 000 est une approximation commode mais elle peut donner des idées assez inexactes quand on considère des données très volumineuses.
+Connaître la taille totale de son compte&lt;/p&gt;
+
+&lt;p&gt;L’option -s permet de n’afficher que la dernière ligne, c’est-à-dire le total de tous les répertoire et sous-répertoires, sans tous les détails. Ainsi, pour connaître la taille de votre compte, faites un du -sk à la racine de votre compte :&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ du -sk
+98280   .&lt;/p&gt;
+
+&lt;p&gt;Encore une fois, si vous êtes sur un PC, utiliser l’option -h ne fera pas de mal :&lt;/p&gt;
+
+&lt;p&gt;brick ~ $ du -sh       &lt;br /&gt;
+96M     .&lt;/p&gt;
+
+&lt;p&gt;Connaître la taille d’un fichier&lt;/p&gt;
+
+&lt;p&gt;L’option -a demande l’affichage la taille de tous les fichiers contenus dans vos répertoires et sous-répertoires. Ici, toujours pour le répertoire « histoire » de Toto :&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ du -ak histoire
+200     histoire/maitrise/maitrise.dvi.bz2
+29      histoire/maitrise/1.html
+6       histoire/maitrise/maitrise.tex
+18      histoire/maitrise/intro.tex
+29      histoire/maitrise/1a.tex
+11      histoire/maitrise/conclu.tex
+112     histoire/maitrise/maitrise.idx
+22      histoire/maitrise/A.tex
+27      histoire/maitrise/biblio.tex
+10      histoire/maitrise/maitrise.toc
+(…)&lt;/p&gt;
+
+&lt;p&gt;Pour connaître la taille d’un fichier précis, il suffit d’indiquer à du -ak le nom de votre fichier (ls -s fait la même chose) :&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ du -ak histoire/maitrise/maitrise.tex
+6       histoire/maitrise/maitrise.tex&lt;/p&gt;
+
+&lt;p&gt;Application : quels sont les plus gros fichiers de votre compte ?&lt;/p&gt;
+
+&lt;p&gt;En utilisant du -ak et le en combinant avec d’autres commandes, vous pouvez savoir précisément quels sont les fichiers et les répertoires qui prennent le plus de place sur votre compte.&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ du -ak | sort -nr | head -10
+98280   .
+22007   ./www
+1658    ./Mail
+9637    ./www/hist
+5005    ./www/hist/maitrise
+4910    ./histoire
+3941    ./Mail/archives
+3757    ./www/philo/
+3274    ./www/philo/cours
+3112    ./www/philo/cours/hegel
+2841    ./prive&lt;/p&gt;
+
+&lt;p&gt;Vous savez donc que sur ce compte, le répertoire le plus volumineux est www (le répertoire qui contient la page Web), puis Mail (qui contient les dossiers de votre boîte aux lettres). À l’intérieur de www, le répertoire le plus gros est www/hist dont www/hist/maitrise occupe la plus grande part, etc.
+Explications&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;du -ak : on demande la taille de tous les fichiers et répertoires du compte, en kilo-octets.
+| : c&#39;est ce qu&#39;on appelle en anglais un pipe, un tuyau. Ce « tuyau » sert à envoyer à une autre commande le résultat de du -ak.
+sort -nr : la commande sort sert à trier des données, en l&#39;espèce on lui demande de trier par taille (-n) puis de classer par ordre décroissant (-r) la liste des fichiers et de leur taille (donnée par du -ak).
+après un autre pipe, on utilise la commande head, qui affiche seulement le début d&#39;un fichier. En l&#39;espèce, on lui demande de ne montrer que les 10 premières lignes du résultat des opérations précédentes.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Le résultat de toutes ces opérations un peu complexes, c’est que vous avez affiché les 10 plus gros répertoires ou fichiers (les deux confondus) de votre compte. Pour ajuster le nombre de fichiers à afficher, changez le nombre après head.&lt;/p&gt;
+
+&lt;p&gt;Si vous voulez conserver quelque part la liste de vos gros fichiers, par exemple si vous demandez une longue liste, utilisez une redirection (&amp;gt;) :&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;sas ~ $ du -ak&lt;/td&gt;
+      &lt;td&gt;sort -nr&lt;/td&gt;
+      &lt;td&gt;head -50 &amp;gt; gros_fichiers.txt&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Le résultat de votre tri sera conservé dans le fichier gros_fichiers.txt que vous pourrez étudier à tête reposée.
+Application : quelle est la taille de votre boîte aux lettres ?&lt;/p&gt;
+
+&lt;p&gt;Nous allons de nouveau utiliser le mécanisme des pipes décrit ci-dessus. Toutes les boîtes aux lettres des gens ayant un compte sur clipper sont dans le répertoire /var/mail (pour les anciens comptes, au format mbox) ou /d (pour les comptes depuis 2014, au format Maildir). À chaque utilisateur correspond le fichier /var/mail/login ou /d/login (remplacez login par votre identifiant) : c’est le contenu de votre boîte aux lettres principale. Les exemples qui suivent s’appliquent aux comptes dont la boîte aux lettres se trouve dans /var/mail.&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ ls -s /var/mail | grep toto
+1142    /var/mail/toto&lt;/p&gt;
+
+&lt;p&gt;Cette fois-ci, il s’agit de :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;demander la taille des fichiers contenus dans le répertoire /var/mail ;
+chercher avec la commande grep le fichier qui vous correspond.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;La boîte mail de l’utilisateur toto fait donc 1 142 Ko. Pour savoir qui ont les plus grosses boîtes aux lettres :&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ ls -s /var/mail | sort -nr | head -10
+161704 blevy
+116728 derrida
+ 75888 hcartan
+ 64912 raron
+ 51744 pasteur
+ 45368 htaine
+ 44720 poincare
+ 44712 cpeguy
+ 44336 rthom
+ 43896 egalois&lt;/p&gt;
+
+&lt;p&gt;Taille d’une partition : df&lt;/p&gt;
+
+&lt;p&gt;La commande df (disk free) indique la place disponible sur les partitions montées.&lt;/p&gt;
+
+&lt;p&gt;Comme pour du, sur certains systèmes il faut ajouter l’option -k (kilobytes), pour être sûr que le résultat sera en Ko et non en blocs.
+Note : l’explication complète de df fait appel à des notions délicates sur la façon dont les fichiers sont organisés, d’autant que nous sommes en réseau (par NFS). On n’entrera donc pas dans les détails dans ce topo. Dans un premier temps, remplacez le mot « partition » par « disque (dur) » et ça suffira largement. Si vous êtes curieux, vous pouvez aller lire Concept : place-disque (article du numéro 6 du Hublot, avril 2000).&lt;/p&gt;
+
+&lt;p&gt;df affiche un tableau, avec une ligne par point de montage. Les colonnes sont respectivement le système de fichiers, sa taille, la place utilisée, la place libre, la proportion d’espace utilisé, et le point de montage. Voici un exemple presque complet :&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ df -h
+Filesystem            Size  Used Avail Use% Mounted on
+(…)
+/dev/dsk/c0t8d0s1     4.2G  3.9G  261M  94% /users/95
+/dev/dsk/c0t9d0s0     8.4G  7.7G  604M  93% /users/97
+/dev/dsk/c0t0d0s5     2.5G  319M  2.1G  13% /users
+/dev/dsk/c0t10d0s1    4.4G  2.4G  2.0G  55% /users/guests
+/dev/dsk/c0t10d0s3    8.4G  5.1G  3.2G  62% /var/mail
+/dev/dsk/c0t8d0s3     4.2G  3.7G  421M  91% /users/96
+/dev/dsk/c0t8d0s6     2.0G  974M  932M  52% /users/94
+/dev/dsk/c0t8d0s4     2.0G  841M  1.1G  44% /var/forum2
+/dev/dsk/c0t12d0s1     12G   11G  549M  96% /users/99
+/dev/dsk/c0t11d0s0     12G   11G  605M  95% /users/00
+/dev/dsk/c0t11d0s1     12G  8.8G  2.4G  79% /users/98
+/dev/dsk/c0t12d0s0     12G   11G  489M  96% /users/01
+/dev/dsk/c0t11d0s3     12G   11G  838M  93% /users/02
+/dev/dsk/c0t12d0s3     12G  6.4G  4.8G  58% /users/03
+(…)&lt;/p&gt;
+
+&lt;p&gt;Pour connaître simplement l’état d’une partition donnée, on utilise df -h &lt;nom de=&quot;&quot; la=&quot;&quot; partition=&quot;&quot;&gt;. Chaque promotion ayant une partition, ceci vous permet de repérer facilement la vôtre :&lt;/nom&gt;&lt;/p&gt;
+
+&lt;p&gt;sas ~ $ df -h /var/mail
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/dsk/c0t10d0s3    8.4G  5.1G  3.2G  62% /var/mail
+sas ~ $ df -h /users/03
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/dsk/c0t12d0s3     12G  6.4G  4.8G  58% /users/03&lt;/p&gt;
+
+&lt;p&gt;Nous voyons donc qu’à l’heure où est écrite cette page, /var/mail est plein à 62 %, et /users/03 est plein à 58 %. La situation est bonne. La situation est considérée comme critique quand on dépasse les 95 % : il suffit de plusieurs personnes qui stockent des images, de gros documents PDF, leur DEA, d’un programme emballé qui écrit sur le disque pour que 100 % de l’espace disque soit pris, rendant ainsi tout travail impossible pour cette promotion. Ceci arrive de temps à autres, et ce n’est vraiment pas drôle…
+En cas d’urgence : si vous vous apercevez que le disque est plein à 99 % ou 100 %, prévenez le SPI (spi@clipper), qui prendra des mesures techniques (déplacement de fichiers, etc.). Prévenez également les Tuteurs, qui enverront un mail de rappel aux coupables (ceux qui ont les plus gros comptes).
+Recommandations
+Ne stockez pas n’importe quoi sur votre compte !&lt;/p&gt;
+
+&lt;p&gt;Votre compte est avant tout un outil de travail, pas un espace de stockage gratuit et illimité de mp3, DivX, photos de vacances et autres fichiers gourmands en place. Imaginez votre tête si vous ne pouviez pas travailler sur un mémoire urgent, parce qu’un zozo conserve l’intégrale de Village People sur son compte…&lt;/p&gt;
+
+&lt;p&gt;Même s’il n’y a pas de quotas, on considère généralement qu’il faut de bonnes raisons pour occuper plus de 100 Mo d’espace disque. « C’est ridicule, le disque dur de mon PC fait 1000 Go ! », me direz-vous. Certes, mais clipper n’a pas les mêmes contraintes qu’une machine personnelle : le matériel est différent, et il y a des sauvegardes quotidiennes, imaginez le volume des données stockées !
+Rangez votre courrier&lt;/p&gt;
+
+&lt;p&gt;Votre mailbox ne devrait pas contenir plus de 50-60 courriers en attente, surtout s’ils contiennent des attachements. Il faut ranger votre courrier dans des dossiers (folders), ainsi ils seront stockés sur votre compte et non dans /var/mail. Pour savoir comment faire, consultez la documentation sur le courrier électronique, ou plus spécifiquement la page indiquant comment vider sa messagerie. Ajoutons qu’en plus, ranger son courrier est plus sûr : si votre lecteur de mail perd les pédales, vous n’aurez pas tout perdu.
+Faites le ménage chez vous&lt;/p&gt;
+
+&lt;p&gt;Première question à vous posez : ne conservez-vous pas des fichiers inutiles ou obsolètes ? Pas la peine de les garder ad vitam æternam sur le disque, dans ce cas. Compresser ou archiver vos fichiers fait économiser une place précieuse. Vous pouvez également supprimer des fichiers qui peuvent être recréés facilement (par exemple les fichiers .dvi, .aux, .log, .toc liés à LaTeX : en 5 secondes de compilation, vous pouvez les retrouver). Ces fichiers vous seront signalés par un courrier du « Démon mange-disque », chargé précisément de repérer ce genre de gros fichiers.
+Stockez ailleurs&lt;/p&gt;
+
+&lt;p&gt;clipper n’est pas votre seule et unique solution pour stocker vos données. Vous pouvez les stocker sur d’autres comptes de l’École : à Montrouge, en salle T pour les matheux… et sur votre ordinateur personnel si vous en avez un, bien sûr. Sous Unix et Linux, utilisez scp ; sous Windows, consultez la page des WinTuteurs sur le transfert de fichiers. Vous pouvez également utiliser FTP.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
+        <link>arcanexil.github.io/SDT//2015/12/05/disque.html</link>
+        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/disque.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Archives</title>
+        <description>&lt;p&gt;Archiver et compresser sous Unix&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Introduction
+    Qu&#39;est-ce que compresser/archiver ?
+    Pourquoi compresser/archiver ?
+Compresser et décompresser
+    Gzip et gunzip
+    Bzip2 et bunzip2
+Archiver et désarchiver
+    Archiver/désarchiver avec tar
+    Archiver/désarchiver avec zip
+    Archiver/désarchiver avec JAR
+    Désarchiver avec UNARJ
+    Archiver/désarchiver avec LHa
+    Archiver/désarchiver avec ZOO
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Cette page a pour but de vous apprendre à compresser et à archiver des fichiers sous Unix. Mais d’abord, commençons par expliquer chacune de ces notions.
+Introduction
+Qu’est-ce que compresser/archiver ?&lt;/p&gt;
+
+&lt;p&gt;Compresser un fichier, c’est le traiter d’une telle sorte qu’il puisse occuper moins d’espace disque. Le principe de base de la compression est d’éviter les redondances ; par exemple, au lieu d’écrire 1111111111111, il est plus économique d’écrire qu’il y a treize « 1 » à la suite.
+Remarque terminologique : le mot « compresser » n’existe pas en bon français, car c’est un anglicisme conçu à partir du verbe compress qui signifie comprimer. Toutefois, l’usage de ce verbe s’étant très largement répandu, nous le suivons lâchement et tournons le dos au dictionnaire de l’Académie.&lt;/p&gt;
+
+&lt;p&gt;Le but de l’archivage n’est pas de réduire l’espace disque d’un fichier, mais de rassembler plusieurs fichiers en un seul, afin de faciliter leur manipulation.&lt;/p&gt;
+
+&lt;p&gt;On peut compresser des fichiers archivés, et archiver des fichiers compressés.&lt;/p&gt;
+
+&lt;p&gt;Dans les deux cas, le fichier est d’abord codé par un programme (de compression ou d’archive). Mais pour utiliser des fichiers (par exemple pour les lire ou les modifier), il faut les décoder. Cette page vous apprendra donc comment compresser et décompresser, archiver et désarchiver des fichiers.
+Pourquoi compresser/archiver ?&lt;/p&gt;
+
+&lt;p&gt;Compresser permet d’économiser de l’espace disque ; associée à l’archivage, la compression se révèle très utile. En particulier, à l’ENS, les ressources en espace disque ne sont pas illimitées ; consultez la page des tuteurs consacrée à l’espace disque pour plus d’informations.
+Compresser et décompresser
+Gzip et gunzip&lt;/p&gt;
+
+&lt;p&gt;Gzip (GNU zip) est un outil de compression (extension : .gz) qui a plus ou moins remplacé compress : il est plus puissant que compress, et il est fondé, lui, sur des algorithmes libres. Gunzip peut décompresser des fichiers compressés par gzip, compress ou pack. En revanche, il ne peut pas décompresser des fichiers .zip (il faut utiliser unzip).&lt;/p&gt;
+
+&lt;p&gt;Pour des raisons historiques, gzip est encore le plus utilisé des formats de compression, quand bien même il n’est pas le plus puissant.
+Lire des fichiers compressés avec gzip&lt;/p&gt;
+
+&lt;p&gt;La grande majorité des programmes est incapable de lire directement des fichiers compressés avec gzip : il faut préalablement les décompresser. Il y a cependant des exceptions notables :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;la commande zcat équivaut à la commande cat, mais pour des fichiers compressés avec gzip ;
+la commande less détecte et décompresse automatiquement les fichiers compressés avec gzip (ce qui n&#39;est pas le cas de la commande more) ;
+la commande gv (Ghostview) décode automatiquement les fichiers compressés avec gzip ; vous pouvez donc sans problème compresser vos fichiers PostScript ou PDF, car vous pourrez les lire sans avoir à les décompresser préalablement.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Synopsis de gzip
+Opération 	Commande
+Compresser un fichier 	gzip fichier
+Compression optimisée d’un fichier (pour fichiers &amp;gt; 100 Ko) 	gzip -9 fichier
+Décompresser un fichier gzippé 	gunzip fichier.gz
+Lire le contenu d’un fichier gzippé (sans le décompresser) 	zcat fichier.gz
+Bzip2 et bunzip2&lt;/p&gt;
+
+&lt;p&gt;Bzip2 est un outil de compression (extension : .bz2) qui est plus lent que gzip, mais plus puissant. Il est libre et fondé sur un algorithme libre, lui aussi.
+Lire des fichiers compressés avec bzip2&lt;/p&gt;
+
+&lt;p&gt;Comme pour gzip, la grande majorité des programmes est incapable de lire directement des fichiers compressés avec bzip2, à quelques exceptions près :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;la commande bzcat2 équivaut à la commande cat, mais pour des fichiers compressés avec bzip2 ;
+la commande less détecte et décompresse automatiquement les fichiers compressés avec bzip2 (ce qui n&#39;est pas le cas de la commande more) ;
+la commande gv (Ghostview) décode automatiquement les fichiers compressés avec bzip2 ; vous pouvez donc sans problème compresser vos fichiers PostScript ou PDF, car vous pourrez les lire sans avoir à les décompresser préalablement.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Synopsis de bzip2
+Opération 	Commande
+Compresser un fichier 	bzip2 fichier
+Compression optimisée d’un fichier (pour fichiers &amp;gt; 100 Ko) 	bzip2 -9 fichier
+Décompresser un fichier gzippé 	bunzip2 fichier.gz
+Lire le contenu d’un fichier gzippé (sans le décompresser) 	bzcat2 fichier.gz
+Archiver et désarchiver
+Archiver/désarchiver avec tar&lt;/p&gt;
+
+&lt;p&gt;Tar est un programme qui permet d’archiver et de désarchiver. C’est l’un des plus courants dans le monde Unix.
+Synopsis de tar
+Opération 	Commande
+Créer une archive tar 	tar cf fichier.tar fichiers… à… archiver
+Voir le contenu d’une archive tar 	tar tf fichier.tar
+Désarchiver un fichier tar 	tar xf fichier.tar
+Extraire certains fichiers d’une archive tar 	tar xf fichier.tar les… fichiers… en… question
+Utiliser tar avec gzip&lt;/p&gt;
+
+&lt;p&gt;tar est souvent utilisé avec gzip. Les fichiers ainsi produits ont des extensions en .tar.gz ou ou .tgz. Pour les manipuler, on utilise les mêmes commandes que tar seul, en ajoutant un z à la fin des options (exemple : pour désarchiver fichier.tgz, taper : tar xfz fichier.tgz).
+Archiver/désarchiver avec zip&lt;/p&gt;
+
+&lt;p&gt;Zip est un outil de compression et d’archivage (extension : .zip) que vous connaissez presque forcément. Il est compatible avec ZIP de PKWARE et avec WINZIP, qui sont le standard sous DOS/Windows (mais pour autant ce n’est pas un clone). C’est le format de compression le plus pratique pour échanger des documents de UNIX à Windows ou Mac (le format de document le plus pratique étant PDF, on vous le rappelle).&lt;/p&gt;
+
+&lt;p&gt;Remarque : zip n’est pas seulement un programme d’archivage, car il permet d’économiser de l’espace disque en compressant les fichiers ; et ce n’est pas seulement un programme de compression, car il rassemble plusieurs fichiers en un seul. Son équivalent dans le monde Unix n’est donc ni gzip ni tar, mais le format tar.gz ou tgz (c’est-à-dire une archive tar compressée avec gzip).
+Synopsis de zip
+Opération 	Commande
+Créer une archive ZIP 	zip fichier.zip fichiers… à… archiver
+Voir le contenu d’une archive ZIP&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;unzip -l fichier.zip&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Désarchiver un fichier ZIP 	unzip fichier.zip
+Désarchiver un fichier ZIP dans un répertoire donné 	unzip -d répertoire fichier.zip
+Extraire tous les fichiers d’une archive ZIP, sauf certains 	unzip fichier.zip -x fichiers… à… ne… pas… extraire
+Archiver/désarchiver avec JAR&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Outputting a very lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong line&quot;&lt;/span&gt;
+  &lt;span class=&quot;vi&quot;&gt;@widget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;respond_to&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# show.html.erb&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;json: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@widget&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Le format JAR (pour Java ARchive) a été introduit dans la version 1.1 du Java Development Kit. C’est un format fondé sur ZIP. Les archives JAR ont une extension .jar. Mozilla, par exemple, utilise des archives JAR.
+Synopsis de jar
+Opération 	Commande
+Créer une archive JAR 	jar cf fichier.jar fichiers… à… archiver
+Voir le contenu d’une archive JAR 	jar tf fichier.jar
+Désarchiver un fichier JAR 	jar xf fichier.jar
+Extraire certains fichiers d’une archive JAR 	jar xf fichier.jar les… fichiers… en… question
+Désarchiver avec UNARJ&lt;/p&gt;
+
+&lt;p&gt;UNARJ sert à désarchiver les fichier en .arj.&lt;/p&gt;
+
+&lt;p&gt;Le format .arj était très utilisé sous DOS. Il n’est plus très utilisé aujourd’hui, ni dans le monde Unix (qui préfère gzip), ni dans le monde Windows (qui préfère zip). Il est donc fortement déconseillé d’utiliser ce format pour compresser des fichiers.
+Synopsis de arj
+Opération 	Commande
+Désarchiver un fichier ARJ dans le fichier courant 	unarj e fichier.arj
+Voir le contenu d’une archive ARJ 	unarj l fichier.arj
+Tester un fichier ARJ 	unarj t fichier.arj
+Désarchiver dans les répertoires prévus par l’archive ARJ 	unarj x fichier.arj
+Archiver/désarchiver avec LHa&lt;/p&gt;
+
+&lt;p&gt;LHa est un outil de compression et d’archivage pour le format LHarc (extension : .lhz). LHa est principalement utilisé sous DOS. C’est un outil puissant. LHa n’est plus vraiment utilisé aujourd’hui.
+Synopsis de LHa
+Opération 	Commande
+Créer une archive LHa 	lha -a fichier.lhz fichiers… à… archiver
+Désarchiver un fichier LHa 	lha -e fichier.lhz ou lha x fichier.lhz
+Voir le contenu d’une archive LHa 	lha -l fichier.lhz
+Archiver/désarchiver avec ZOO&lt;/p&gt;
+
+&lt;p&gt;ZOO est un outil de compression et d’archivage (extension : .zoo) qui utilise un algorithme de Lempel-Ziv. Le gain d’espace varie entre 20 et 80%. ZOO n’est plus vraiment utilisé aujourd’hui.
+Synopsis de ZOO
+Opération 	Commande
+Créer une archive ZOO 	zoo -add fichier.zoo fichiers… à… archiver
+Désarchiver un fichier ZOO 	zoo -extract fichier.zoo
+Extraire certains fichiers d’une archive ZOO 	zoo -extract fichier.zoo fichiers… à… extraire
+Voir le contenu d’une archive ZOO 	zoo -list fichier.zoo&lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
+        <link>arcanexil.github.io/SDT//2015/12/05/archives.html</link>
+        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/archives.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mémos formats</title>
+        <description>&lt;p&gt;La commande ** file** (dans une terminal sur ubuntu) permet de déterminer rapidement le format de certains fichiers quand on ne dispose 
+pas 
+d’indication 
+comme un 
+suffixe 
+pour le savoir :
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+sas ~ $ file note.png 
+note.png: PNG image data, 32 x 32, 4-bit colormap, non-interlaced
+sas ~tuteurs/tex/documents/doc/doc-2003 $ file questionnaire.ps
+questionnaire.ps: PostScript document text conforming at level 2.0
+&lt;/code&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Dec 2015 00:00:00 +0100</pubDate>
+        <link>arcanexil.github.io/SDT//2015/12/05/memo.html</link>
+        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/12/05/memo.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;joli page :)&lt;/p&gt;
+</description>
+        <pubDate>Fri, 04 Dec 2015 10:47:42 +0100</pubDate>
+        <link>arcanexil.github.io/SDT//jekyll/update/2015/12/04/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">arcanexil.github.io/SDT//jekyll/update/2015/12/04/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Linux</title>
+        <description>&lt;h1 id=&quot;pages-unix-du-site-des-tuteurs&quot;&gt;Pages Unix du site des tuteurs&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Éditer un texte
+Les fichiers et les répertoires
+Imprimer
+Structure d&#39;un système Unix
+Divers
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Nous présentons ici les notions de base pour l’utilisation des machines fonctionnant sur un système d’exploitation de type Unix. Pour savoir ce qu’est Unix et d’où vient ce système, lisez nos présentations d’Unix (pour débutants ou plus technique) et notre brève histoire d’Unix.
+Aller plus loin : pour tout ce qu’on ne dit pas dans ces pages de « cours » et pour vous entraîner, vous pouvez faire ces exercices.
+# Éditer un texte&lt;/p&gt;
+
+&lt;p&gt;Un éditeur vous permet de créer ou modifier un texte, sans mise en forme (contrairement à un traitement de texte). Plusieurs éditeurs sont disponibles à l’ENS, comme Emacs, joe, nano, pico, NEdit ou encore Vim. Les plus puissants (et aussi les plus complexes) sont Emacs et Vim.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;une présentation de NEdit, un éditeur simple, intuitif et néanmoins assez puissant
+Les 7 cercles des éditeurs de texte : comment apprendre progressivement à utiliser emacs, nano et vim (incomplet)
+un tutorial Emacs, complété par une collection d&#39;astuces pour les utilisateurs confirmés et un aide-mémoire des principales commandes
+un tutorial encore incomplet pour vim
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;les-fichiers-et-les-rpertoires&quot;&gt;Les fichiers et les répertoires&lt;/h1&gt;
+
+&lt;p&gt;Les pages suivantes concernent la manipulation des fichiers et des répertoires.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Système de fichiers : comment sont organisés les fichiers, comment se déplacer dans l&#39;arborescence ;
+Fichiers : manipulations de base des fichiers (en afficher, les renommer, copier, effacer...) ;
+Répertoires : créer et détruire des répertoires, en changer... ;
+Archiver des fichiers : compresser et décompresser des fichiers ;
+Recherche : rechercher des fichiers ou du texte dans différents fichiers ;
+Supports de données amovibles : transférer des fichiers en utilisant des CDROM, clefs USB et disquettes.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;imprimer&quot;&gt;Imprimer&lt;/h1&gt;
+
+&lt;p&gt;Vous pouvez imprimer différents types de documents dans les salles informatique, cette page vous apprend à utiliser ces imprimantes.
+# Structure d’un système Unix&lt;/p&gt;
+
+&lt;p&gt;Pendant le fonctionnement d’un ordinateur sous le système d’exploitation Unix, plusieurs processus fonctionnent en même temps (plus précisément l’un après l’autre en alternance dans le cas d’un ordinateur ayant un unique processeur). Ainsi, une défaillance d’un de ces processus n’implique pas de défaillance globale du système. Cette page permet d’apprendre à gérer concrètement ses processus.&lt;/p&gt;
+
+&lt;p&gt;L’information constituée par un fichier est soumise à un certain nombre de droits d’accès. Par exemple, c’est ce genre de mécanismes qui assure que vous êtes la seule personne autorisée à lire votre propre courrier électronique (en théorie, l’administrateur système peut techniquement le faire, mais il ne le fait évidemment pas). Pour plus de détails, consultez la page sur les droits d’accès.&lt;/p&gt;
+
+&lt;p&gt;Les commandes que vous entrez dans les terminaux (xterm ou Konsole, par exemple) sont exécutées par ce que l’on appelle un shell. Cette page contient quelques notions de base sur le shell.
+# Divers&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;L&#39;aide en ligne d&#39;Unix : obtenir de l&#39;aide sur une commande ou un concept : pages de man, option -h, pages info.
+Place disque : quelle taille fait un fichier, son compte ou sa boîte aux lettres ? Combien de place reste-t-il sur le disque ?
+Autres utilisateurs : pour obtenir quelques informatiques sur d&#39;autres utilisateurs ;
+Jeux : tant que vous ne dérangez pas vos voisins ni ne saturez une connexion réseau, vous pouvez utiliser ces quelques jeux « éducatifs » ;
+Tout et n&#39;importe quoi : diverses commandes très diverses...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 29 Nov 2015 00:00:00 +0100</pubDate>
+        <link>arcanexil.github.io/SDT//2015/11/29/linux.html</link>
+        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/11/29/linux.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Le guide des premières fois</title>
+        <description>&lt;p&gt;Ces pages présentent les machines Unix disponibles dans les salles élèves libre-service (salle S, salle Infi, salle du 46, Jourdan, 
+Montrouge, salle T). Vous avez sans doute l’habitude d’utiliser des Mac ou des PC sous Windows; nous allons ici vous présenter les 
+machines Unix (PC sous Ubuntu) que vous utiliserez tout au long de votre scolarité.&lt;/p&gt;
+
+&lt;p&gt;Pour tout savoir sur notre site, ses conventions graphiques, un plan, par ici !
+## Notions premières&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Les comptes informatiques : comment se loguer, comment changer son mot de passe.
+Présentation générale des logiciels installés à l&#39;ENS
+Présentation de la config&#39; conscrits : la configuration par défaut à l&#39;École, améliorée chaque année par les Gourous
+Commandes et clavier : quelques trucs simples à savoir absolument.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;conseils&quot;&gt;Conseils&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Obtenir de l&#39;aide
+Les trois choses à ne pas faire.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;aller-plus-loin&quot;&gt;Aller plus loin&lt;/h2&gt;
+
+&lt;p&gt;Si vous êtes déjà un peu rodé et que vous voulez mieux exploiter les ressources informatiques de l’ENS, voici quelques pages qui vous 
+aideront :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Apprendre quelques commandes basiques d&#39;Unix : lire et manipuler (copier, effacer et renommer) des fichiers.
+Apprendre à se servir d&#39;un éditeur de texte.
+Lire votre courrier électronique, par exemple avec Pine.
+Se connecter à distance, de votre thurne vers clipper, par exemple, et transférer des fichiers.
+Utiliser l&#39;aide en ligne
+Pourquoi pas créer votre page Web ? Pour ça, vous pouvez apprendre le HTML.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Et voici quelques guides de survie.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Guide de survie sous Unix
+Guide de survie avec LaTeX
+Guide de survie sur forum (voir aussi forum)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 29 Nov 2015 00:00:00 +0100</pubDate>
+        <link>arcanexil.github.io/SDT//2015/11/29/debutant.html</link>
+        <guid isPermaLink="true">arcanexil.github.io/SDT//2015/11/29/debutant.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
